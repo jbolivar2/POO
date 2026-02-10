@@ -9,7 +9,6 @@ class Potencias:
         return self.numero ** 3
 
 
-# Programa principal
 numero = float(input("Ingrese un número: "))
 
 potencia = Potencias(numero)
