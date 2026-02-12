@@ -1,18 +1,24 @@
 class Seguimiento:
-    def __init__(self):
+
+    def __init__(self, x, y):
         self.suma = 0
-        self.x = 20
-        self.y = 40
+        self.x = x
+        self.y = y
 
     def ejecutar(self):
+        self.suma = 0
         self.suma = self.suma + self.x
-        self.x = self.x + self.y ** 2
+        self.x = self.x + self.y * 2
         self.suma = self.suma + self.x / self.y
 
     def mostrar_resultado(self):
-        print("El valor de la suma es:", self.suma)
+        print("\nResultado final:")
+        print("Valor de la suma:", self.suma)
 
 
-proceso = Seguimiento()
+x = float(input("Ingrese valor de X: "))
+y = float(input("Ingrese valor de Y: "))
+
+proceso = Seguimiento(x, y)
 proceso.ejecutar()
 proceso.mostrar_resultado()
