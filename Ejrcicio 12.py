@@ -10,11 +10,15 @@ class Empleado:
         self.salario_neto = self.salario_bruto - self.retencion
 
     def mostrar_datos(self):
+        print("\nResultados:")
         print("Salario bruto:", self.salario_bruto)
         print("Retención:", self.retencion)
         print("Salario neto:", self.salario_neto)
 
 
-empleado1 = Empleado(48, 5000)
+horas = float(input("Ingrese número de horas trabajadas: "))
+valor = float(input("Ingrese valor por hora: "))
+
+empleado1 = Empleado(horas, valor)
 empleado1.calcular_salario()
 empleado1.mostrar_datos()
