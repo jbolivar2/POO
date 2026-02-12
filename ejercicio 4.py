@@ -1,7 +1,7 @@
 class EdadesFamilia:
 
-    def __init__(self):
-        self.edad_juan = 3
+    def __init__(self, edad_juan):
+        self.edad_juan = edad_juan
 
     def calcular_edades(self):
         self.edad_alberto = (2/3) * self.edad_juan
@@ -9,12 +9,14 @@ class EdadesFamilia:
         self.edad_mama = self.edad_juan + self.edad_alberto + self.edad_ana
 
     def mostrar_edades(self):
+        print("\nResultados:")
         print("Edad de Juan:", self.edad_juan)
         print("Edad de Alberto:", self.edad_alberto)
         print("Edad de Ana:", self.edad_ana)
         print("Edad de la mamá:", self.edad_mama)
 
 
-familia = EdadesFamilia()
+edad = float(input("Ingrese la edad de Juan: "))
+familia = EdadesFamilia(edad)
 familia.calcular_edades()
 familia.mostrar_edades()
