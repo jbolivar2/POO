@@ -1,17 +1,18 @@
-class Potencias:
+class Numero:
+
     def __init__(self, numero):
         self.numero = numero
 
-    def calcular_cuadrado(self):
-        return self.numero ** 2
+    def calcular(self):
+        self.cuadrado = self.numero ** 2
+        self.cubo = self.numero ** 3
 
-    def calcular_cubo(self):
-        return self.numero ** 3
+    def mostrar(self):
+        print("Número:", self.numero)
+        print("Cuadrado:", self.cuadrado)
+        print("Cubo:", self.cubo)
 
 
-numero = float(input("Ingrese un número: "))
-
-potencia = Potencias(numero)
-
-print("El cuadrado es:", potencia.calcular_cuadrado())
-print("El cubo es:", potencia.calcular_cubo())
+num = Numero(5)
+num.calcular()
+num.mostrar()
